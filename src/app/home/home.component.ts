@@ -10,12 +10,12 @@ export class HomeComponent implements OnInit {
 
   constructor(meta: Meta, title: Title) {
     
-        title.setTitle('My Spiffy Home Page');
+        title.setTitle('Home Page');
     
         meta.addTags([
-          { name: 'author',   content: 'Coursetro.com'},
-          { name: 'keywords', content: 'angular seo, angular 4 universal, etc'},
-          { name: 'description', content: 'This is my Angular SEO-based App, enjoy it!' }
+          { name: 'author',   content: 'Saher Shaukat'},
+          { name: 'keywords', content: 'angular seo, angular 4 universal'},
+          { name: 'description', content: 'This is my Angular SEO-based Application!' }
         ]);
     
       }

@@ -13,7 +13,7 @@ export class AboutComponent implements OnInit {
         title.setTitle('About Page');
     
         meta.addTags([
-          { name: 'author',   content: 'Hathway.com'},
+          { name: 'author',   content: 'Saher- Shaukat'},
           { name: 'keywords', content: 'angular seo, about page '},
           { name: 'description', content: 'This is my Angular about page' }
         ]);
