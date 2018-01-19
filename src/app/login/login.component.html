@@ -1,0 +1,45 @@
+<div id="login-box">
+  <div class="left">
+    <h1>ISP SELFCARE LOGIN</h1>
+    <form>
+
+      <div>
+        <input type="radio" [(ngModel)]="loginObj.type" name="type" value="phone_no"> Mobile Number
+        <input type="radio" [(ngModel)]="loginObj.type" name="type" value="accountNumber"> Account Number
+        <input type="radio" [(ngModel)]="loginObj.type" name="type" value="emailAddress"> Email address
+        <input type="radio" [(ngModel)]="loginObj.type" name="type" value="userName"> UserName
+      </div>
+      <div>
+        <br>
+        <!-- <small class="check" *ngIf="loginForm.controls['login'].hasError('required')" style="color:red">*</small> -->
+
+        <div class="input-group">
+          <input type="text" [(ngModel)]="loginObj.input_value" name="input_value" placeholder="{{loginObj.type}}" (keyup)="createUser()" />
+        </div>
+        <div class="check">{{errorMessage}}</div>
+      </div>
+      <button type="button" class="btn btn-primary  pull-left col-sm-3" (click)="sendOtp()">send otp</button>
+      <div class="input-group">
+        <input type="text" [(ngModel)]="otp" name="otp" placeholder="Enter the otp" />
+      </div>
+      <button type="button" class="btn btn-warning" (click)="verifyOtp()">verify otp</button><br><br>
+
+
+      <button type="submit" id="loginButton" class="btn btn-warning" [disabled]="flag" align="center" (click)="loginUser()">
+
+        Login
+        <span class="glyphicon glyphicon-send"></span>
+      </button>
+    </form>
+  </div>
+  <!-- <div class="right">
+    <span class="loginwith">Sign up with
+      <br />social network</span>
+
+    <button class="social-signin facebook">Sign up with facebook</button>
+
+    <button class="social-signin google">Sign up with Google+</button> -->
+  <!-- </div> -->
+
+  <!-- <div class="or">OR</div> -->
+</div>
